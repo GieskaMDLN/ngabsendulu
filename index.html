@@ -1,1 +1,248 @@
-<script language=javascript>document.write(unescape('%3C%21DOCTYPE%20html%3E%0A%3Chtml%20lang%3D%22id%22%3E%0A%0A%3Chead%3E%0A%20%20%20%20%3Cmeta%20charset%3D%22UTF-8%22%3E%0A%20%20%20%20%3Cmeta%20name%3D%22viewport%22%20content%3D%22width%3Ddevice-width%2C%20initial-scale%3D1.0%22%3E%0A%20%20%20%20%3Ctitle%3EAbsen%20Cynthia%3C/title%3E%0A%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20body%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20background-color%3A%20%23ffe6f0%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20font-family%3A%20%27Comic%20Sans%20MS%27%2C%20cursive%2C%20sans-serif%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20color%3A%20%23ff69b4%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20display%3A%20flex%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20flex-direction%3A%20column%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20align-items%3A%20center%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20justify-content%3A%20center%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20height%3A%20100vh%3B%0A%20%20%20%20%20%20%20%20%7D%0A%0A%20%20%20%20%20%20%20%20h1%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20font-size%3A%202em%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20margin-bottom%3A%2020px%3B%0A%20%20%20%20%20%20%20%20%7D%0A%0A%20%20%20%20%20%20%20%20.absen-box%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20background%3A%20%23fff0f5%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20border%3A%202px%20solid%20%23ffb6c1%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20border-radius%3A%2015px%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20padding%3A%2020px%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20width%3A%20300px%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20box-shadow%3A%200%200%2010px%20%23ffc0cb%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20text-align%3A%20center%3B%0A%20%20%20%20%20%20%20%20%7D%0A%0A%20%20%20%20%20%20%20%20input%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20width%3A%20100%25%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20padding%3A%208px%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20margin%3A%2010px%200%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20border%3A%201px%20solid%20%23ffb6c1%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20border-radius%3A%2010px%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20background-color%3A%20%23fff%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20color%3A%20%23ff69b4%3B%0A%20%20%20%20%20%20%20%20%7D%0A%0A%20%20%20%20%20%20%20%20button%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20background-color%3A%20%23ff69b4%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20color%3A%20%23fff%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20border%3A%20none%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20padding%3A%2010px%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20width%3A%20100%25%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20border-radius%3A%2010px%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20cursor%3A%20pointer%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20transition%3A%200.3s%3B%0A%20%20%20%20%20%20%20%20%7D%0A%0A%20%20%20%20%20%20%20%20button%3Ahover%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20background-color%3A%20%23ff85c1%3B%0A%20%20%20%20%20%20%20%20%7D%0A%0A%20%20%20%20%20%20%20%20.popup%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20position%3A%20fixed%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20top%3A%200%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20left%3A%200%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20width%3A%20100%25%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20height%3A%20100%25%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20background%3A%20rgba%28255%2C%20182%2C%20193%2C%200.8%29%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20display%3A%20flex%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20align-items%3A%20center%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20justify-content%3A%20center%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20display%3A%20none%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20flex-direction%3A%20column%3B%0A%20%20%20%20%20%20%20%20%7D%0A%0A%20%20%20%20%20%20%20%20.popup-content%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20background%3A%20%23fff0f5%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20padding%3A%2030px%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20border-radius%3A%2015px%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20border%3A%202px%20solid%20%23ffb6c1%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20text-align%3A%20center%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20box-shadow%3A%200%200%2015px%20%23ffc0cb%3B%0A%20%20%20%20%20%20%20%20%7D%0A%0A%20%20%20%20%20%20%20%20.credit%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20margin-top%3A%2020px%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20font-size%3A%200.8em%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20color%3A%20%23c58ca2%3B%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%3C/style%3E%0A%3C/head%3E%0A%0A%3Cbody%3E%0A%20%20%20%20%3Ch1%3EAbsen%20Kelas%20Dosen%20Cynthia%3C/h1%3E%0A%20%20%20%20%3Cdiv%20class%3D%22absen-box%22%3E%0A%20%20%20%20%20%20%20%20%3Cinput%20type%3D%22text%22%20id%3D%22nama%22%20placeholder%3D%22Masukkan%20Nama%20Kamu%22%3E%0A%20%20%20%20%20%20%20%20%3Cbutton%20onclick%3D%22absen%28%29%22%3EAbsen%20Sekarang%3C/button%3E%0A%20%20%20%20%3C/div%3E%0A%0A%20%20%20%20%3Cdiv%20class%3D%22popup%22%20id%3D%22popup%22%3E%0A%3C%21--%20Ganti%20bagian%20ini%20di%20popup-content%20--%3E%0A%20%20%20%20%3Cdiv%20class%3D%22popup-content%22%3E%0A%20%20%20%20%20%3Ch2%3E%u2728%20%20Terimakasih%20Sudah%20Absen%20Ya%20%u2728%3C/h2%3E%0A%20%20%20%20%20%20%20%20%3Cp%20id%3D%22popup-nama%22%3E%3C/p%3E%0A%20%20%20%20%20%20%20%20%3Cp%20id%3D%22popup-waktu%22%3E%3C/p%3E%20%3C%21--%20ini%20buat%20nampung%20tanggal%20%26%20waktu%20--%3E%0A%20%20%20%20%20%20%20%20%20%3Csmall%3EJangan%20lupa%20screenshot%20yaa%20%uD83D%uDC96%3C/small%3E%3Cbr%3E%3Cbr%3E%0A%20%20%20%20%20%20%20%20%20%3Cbutton%20onclick%3D%22tutup%28%29%22%3ESiap%20Bu%3C/button%3E%0A%20%20%20%20%3C/div%3E%0A%20%20%20%20%3C/div%3E%0A%0A%20%20%20%20%3Cdiv%20class%3D%22credit%22%3EBot%20Dev%20@ccynthiia48bot%3C/div%3E%0A%0A%20%20%20%20%3Cscript%3E%0Afunction%20absen%28%29%20%7B%0A%20%20%20%20const%20nama%20%3D%20document.getElementById%28%27nama%27%29.value.trim%28%29%3B%0A%20%20%20%20if%20%28nama%29%20%7B%0A%20%20%20%20%20%20%20%20document.getElementById%28%27popup-nama%27%29.innerHTML%20%3D%20%60%3Cstrong%3E%24%7Bnama%7D%3C/strong%3E%60%3B%0A%20%20%20%20%20%20%20%20const%20waktu%20%3D%20%60%24%7Bnew%20Date%28%29.toLocaleDateString%28%29%7D%20%7C%20%24%7Bnew%20Date%28%29.toLocaleTimeString%28%29%7D%60%3B%0A%20%20%20%20%20%20%20%20document.getElementById%28%27popup-waktu%27%29.textContent%20%3D%20waktu%3B%0A%20%20%20%20%20%20%20%20document.getElementById%28%27popup%27%29.style.display%20%3D%20%27flex%27%3B%0A%20%20%20%20%7D%20else%20%7B%0A%20%20%20%20%20%20%20%20alert%28%22isi%20nama%20km%20dulu%20yh%22%29%3B%0A%20%20%20%20%7D%0A%7D%0A%0A%0A%20%20%20%20%20%20%20%20function%20tutup%28%29%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20document.getElementById%28%27popup%27%29.style.display%20%3D%20%27none%27%3B%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%3C/script%3E%0A%3C/body%3E%0A%0A%3C/html%3E%0A'))</script>
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>#NgabsenCyn Absen Woi Absen</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Quicksand', sans-serif;
+      background: linear-gradient(to bottom right, #ffe6f0, #fff5fa);
+      color: #333;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .credit {
+    margin-top: 30px;
+     font-size: 14px;
+    color: #cc6699;
+     font-style: italic;
+     opacity: 0.8;
+    }
+
+    h2 {
+      color: #ff66b2;
+      font-size: 24px;
+    }
+
+    input, button {
+      padding: 10px;
+      border: 2px solid #ff99cc;
+      border-radius: 8px;
+      margin: 5px;
+      font-size: 16px;
+      width: 80%;
+      max-width: 300px;
+    }
+
+    button {
+      background-color: #ff66b2;
+      color: white;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background-color: #ff3385;
+    }
+
+    #popup {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(255, 204, 242, 0.95);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      z-index: 9999;
+      animation: fadeIn 0.3s ease-in-out;
+      padding: 20px;
+      text-align: center;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    #popup h3 {
+      font-size: 24px;
+      color: #d63384;
+      margin-bottom: 10px;
+    }
+
+    #popup span {
+      font-size: 18px;
+      color: #660033;
+    }
+
+    #closePopup {
+      margin-top: 20px;
+      background-color: #ff66b2;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .table-container {
+      overflow-x: auto;
+      margin: 20px auto;
+      max-width: 95%;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      min-width: 300px;
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 0 8px rgba(255, 105, 180, 0.2);
+    }
+
+    th, td {
+      padding: 12px 16px;
+      text-align: left;
+      border-bottom: 1px solid #ffe0ef;
+    }
+
+    th {
+      background-color: #ffcce6;
+      color: #b30059;
+      font-weight: 600;
+    }
+
+    tr:nth-child(even) {
+      background-color: #fff5fa;
+    }
+
+    tr.highlight {
+      background-color: #ffe6f0 !important;
+    }
+
+    #toggleListBtn {
+      margin: 15px auto;
+      background-color: #ff99cc;
+      border: none;
+      border-radius: 8px;
+      padding: 10px 20px;
+      font-size: 16px;
+      color: white;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    #toggleListBtn:hover {
+      background-color: #ff66b2;
+    }
+
+    @media screen and (max-width: 600px) {
+      h2 {
+        font-size: 20px;
+      }
+      input, button {
+        width: 100%;
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h2>#NgabsenCyn Absen Dulu Gais</h2>
+  <form id="absenForm">
+    <input type="text" id="nama" name="nama" placeholder="Nama Mahasiswa" required>
+    <button type="submit">Ngirim Absen</button>
+  </form>
+
+  <div id="popup">
+    <h3>Makasih Bro Udah Absen</h3>
+    <span id="popupNama"></span><br>
+    <span id="popupWaktu"></span>
+    <button id="closePopup">Okei SYAPPPP</button>
+  </div>
+  
+  <button id="toggleListBtn">Tutup Aja Deh List Absennya</button>
+  <div class="table-container">
+    <div id="list">Sabar Loading...</div>
+  </div>
+
+  <script>
+    const endpoint = "https://script.google.com/macros/s/AKfycbwukXJ4CyVWhDWq7zeIRVrTPjF7PadWRLh-eOf-DpvZMVvEiHOuC2SCLzWX5wd82KBaeA/exec";
+    let daftarNama = [];
+
+    document.getElementById("absenForm").addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const nama = document.getElementById("nama").value.trim();
+
+      if (daftarNama.includes(nama.toLowerCase())) {
+        alert(`Nama "${nama}" sudah absen sebelumnya!`);
+        return;
+      }
+
+      const res = await fetch(endpoint, {
+        method: "POST",
+        body: new URLSearchParams({ nama })
+      });
+
+      const waktu = new Date().toLocaleString("id-ID", { timeZone: "Asia/Jakarta" });
+      daftarNama.push(nama.toLowerCase());
+
+      document.getElementById("popupNama").innerText = `Nama: ${nama}`;
+      document.getElementById("popupWaktu").innerText = `Waktu: ${waktu}`;
+      document.getElementById("popup").style.display = "flex";
+
+      document.getElementById("absenForm").reset();
+      tampilkanList();
+    });
+
+    document.getElementById("closePopup").addEventListener("click", () => {
+      document.getElementById("popup").style.display = "none";
+    });
+
+    async function tampilkanList() {
+      try {
+        const res = await fetch(endpoint);
+        const data = await res.json();
+
+        daftarNama = data.map(row => row.nama.toLowerCase());
+        const today = new Date().toLocaleDateString("id-ID");
+
+        let html = "<table><tr><th>Nama Mahasiswa</th><th>Waktu Absen</th></tr>";
+        data.forEach(row => {
+          const rowDate = new Date(row.waktu).toLocaleDateString("id-ID");
+          const isToday = rowDate === today;
+          html += `<tr class="${isToday ? 'highlight' : ''}">
+                     <td>${row.nama}</td><td>${row.waktu}</td>
+                   </tr>`;
+        });
+        html += "</table>";
+        document.getElementById("list").innerHTML = html;
+      } catch (e) {
+        document.getElementById("list").innerText = "Gagal memuat data absensi 😢";
+      }
+    }
+
+    tampilkanList();
+
+    const toggleBtn = document.getElementById("toggleListBtn");
+    const listContainer = document.querySelector(".table-container");
+
+    toggleBtn.addEventListener("click", () => {
+      if (listContainer.style.display === "none") {
+        listContainer.style.display = "block";
+        toggleBtn.innerText = "Tutup Aja Deh List Absennya";
+      } else {
+        listContainer.style.display = "none";
+        toggleBtn.innerText = "Kepo Ah Siapa Aja Yang Udah Absen";
+      }
+    });
+  </script>
+<div class="credit">Developer Website @ccynthiia48bot</div>
+</body>
+</html>
