@@ -1,12 +1,12 @@
-&#x3C;!DOCTYPE html&#x3E;
-&#x3C;html lang=&#x22;id&#x22;&#x3E;
-&#x3C;head&#x3E;
-  &#x3C;meta charset=&#x22;UTF-8&#x22; /&#x3E;
-  &#x3C;meta name=&#x22;viewport&#x22; content=&#x22;width=device-width, initial-scale=1&#x22; /&#x3E;
-  &#x3C;title&#x3E;Absensi Mahasiswa - Universitas CynCyn&#x3C;/title&#x3E;
-  &#x3C;style&#x3E;
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Absensi Mahasiswa - Universitas CynCyn</title>
+  <style>
     body {
-      font-family: &#x27;Segoe UI&#x27;, sans-serif;
+      font-family: 'Segoe UI', sans-serif;
       background: linear-gradient(to bottom right, #ffe4f2, #ffd9ec);
       margin: 0; padding: 0;
       display: flex;
@@ -41,7 +41,7 @@
       gap: 16px;
       margin-bottom: 25px;
     }
-    input[type=&#x22;text&#x22;],
+    input[type="text"],
     select,
     textarea {
       padding: 12px 15px;
@@ -52,7 +52,7 @@
       transition: border-color 0.3s ease;
       font-family: inherit;
     }
-    input[type=&#x22;text&#x22;]:focus,
+    input[type="text"]:focus,
     select:focus,
     textarea:focus {
       border-color: #ff69b4;
@@ -83,68 +83,68 @@
       text-align: center;
       display: none;
     }
-  &#x3C;/style&#x3E;
-&#x3C;/head&#x3E;
-&#x3C;body&#x3E;
-  &#x3C;div class=&#x22;card&#x22;&#x3E;
-    &#x3C;h1&#x3E;Absensi Mahasiswa&#x3C;/h1&#x3E;
-    &#x3C;p&#x3E;Dosen: Cynthia Yaputera S.T.&#x3C;br&#x3E;Universitas CynCyn&#x3C;/p&#x3E;
-    &#x3C;div class=&#x22;form-group&#x22;&#x3E;
-      &#x3C;input type=&#x22;text&#x22; id=&#x22;nimInput&#x22; placeholder=&#x22;Masukkan NIM kamu&#x22; /&#x3E;
-      &#x3C;input type=&#x22;text&#x22; id=&#x22;namaInput&#x22; placeholder=&#x22;Masukkan Nama Lengkap&#x22; /&#x3E;
-      &#x3C;select id=&#x22;prodiSelect&#x22; &#x3E;
-        &#x3C;option value=&#x22;&#x22; disabled selected&#x3E;Pilih Program Studi&#x3C;/option&#x3E;
-        &#x3C;option value=&#x22;Teknik Informatika&#x22;&#x3E;Teknik Informatika&#x3C;/option&#x3E;
-        &#x3C;option value=&#x22;Sistem Informasi&#x22;&#x3E;Sistem Informasi&#x3C;/option&#x3E;
-        &#x3C;option value=&#x22;Teknik Elektro&#x22;&#x3E;Teknik Elektro&#x3C;/option&#x3E;
-        &#x3C;option value=&#x22;Manajemen&#x22;&#x3E;Manajemen&#x3C;/option&#x3E;
-      &#x3C;/select&#x3E;
-      &#x3C;select id=&#x22;jenjangSelect&#x22; &#x3E;
-        &#x3C;option value=&#x22;&#x22; disabled selected&#x3E;Pilih Jenjang Pendidikan&#x3C;/option&#x3E;
-        &#x3C;option value=&#x22;S1&#x22;&#x3E;S1&#x3C;/option&#x3E;
-        &#x3C;option value=&#x22;S2&#x22;&#x3E;S2&#x3C;/option&#x3E;
-        &#x3C;option value=&#x22;D3&#x22;&#x3E;S3&#x3C;/option&#x3E;
-      &#x3C;/select&#x3E;
-      &#x3C;textarea id=&#x22;keteranganInput&#x22; placeholder=&#x22;Keterangan (opsional)&#x22;&#x3E;&#x3C;/textarea&#x3E;
-    &#x3C;/div&#x3E;
-    &#x3C;button onclick=&#x22;submitAbsensi()&#x22;&#x3E;Kirim&#x3C;/button&#x3E;
-    &#x3C;div class=&#x22;success-message&#x22; id=&#x22;successMsg&#x22;&#x3E;absensi berhasil&#x3C;/div&#x3E;
-  &#x3C;/div&#x3E;
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Absensi Mahasiswa</h1>
+    <p>Dosen: Cynthia Yaputera S.T.<br>Universitas CynCyn</p>
+    <div class="form-group">
+      <input type="text" id="nimInput" placeholder="Masukkan NIM kamu" />
+      <input type="text" id="namaInput" placeholder="Masukkan Nama Lengkap" />
+      <select id="prodiSelect" >
+        <option value="" disabled selected>Pilih Program Studi</option>
+        <option value="Teknik Informatika">Teknik Informatika</option>
+        <option value="Sistem Informasi">Sistem Informasi</option>
+        <option value="Teknik Elektro">Teknik Elektro</option>
+        <option value="Manajemen">Manajemen</option>
+      </select>
+      <select id="jenjangSelect" >
+        <option value="" disabled selected>Pilih Jenjang Pendidikan</option>
+        <option value="S1">S1</option>
+        <option value="S2">S2</option>
+        <option value="D3">S3</option>
+      </select>
+      <textarea id="keteranganInput" placeholder="Keterangan (opsional)"></textarea>
+    </div>
+    <button onclick="submitAbsensi()">Kirim</button>
+    <div class="success-message" id="successMsg">absensi berhasil</div>
+  </div>
 
-  &#x3C;script&#x3E;
+  <script>
     function submitAbsensi() {
-      const nim = document.getElementById(&#x22;nimInput&#x22;).value.trim();
-      const nama = document.getElementById(&#x22;namaInput&#x22;).value.trim();
-      const prodi = document.getElementById(&#x22;prodiSelect&#x22;).value;
-      const jenjang = document.getElementById(&#x22;jenjangSelect&#x22;).value;
-      const keterangan = document.getElementById(&#x22;keteranganInput&#x22;).value.trim();
+      const nim = document.getElementById("nimInput").value.trim();
+      const nama = document.getElementById("namaInput").value.trim();
+      const prodi = document.getElementById("prodiSelect").value;
+      const jenjang = document.getElementById("jenjangSelect").value;
+      const keterangan = document.getElementById("keteranganInput").value.trim();
 
       if (!nim || !nama || !prodi || !jenjang) {
-        alert(&#x22;Ehh kocak minimal isi semuanya lahhh&#x22;);
+        alert("Ehh kocak minimal isi semuanya lahhh");
         return;
       }
 
-      let pesan = &#x60;Permisi Bu Dosen Cynthia saya ${nama} dengan NIM ${nim}, dari Prodi ${prodi} Jenjang ${jenjang}, sudah melakukan absensi digital melalui website.&#x60;;
+      let pesan = Permisi Bu Dosen Cynthia saya ${nama} dengan NIM ${nim}, dari Prodi ${prodi} Jenjang ${jenjang}, sudah melakukan absensi digital melalui website.;
       if(keterangan){
-        pesan += &#x60; Keterangan: ${keterangan}&#x60;;
+        pesan +=  Keterangan: ${keterangan};
       }
 
       const encodedPesan = encodeURIComponent(pesan);
-      const telegramUrl = &#x60;https://t.me/yCynthia48bot?text=${encodedPesan}&#x60;;
-      window.open(telegramUrl, &#x22;_blank&#x22;);
+      const telegramUrl = https://t.me/yCynthia48bot?text=${encodedPesan};
+      window.open(telegramUrl, "_blank");
 
-      const successMsg = document.getElementById(&#x22;successMsg&#x22;);
-      successMsg.style.display = &#x22;block&#x22;;
+      const successMsg = document.getElementById("successMsg");
+      successMsg.style.display = "block";
 
-      setTimeout(() =&#x3E; {
-        successMsg.style.display = &#x22;none&#x22;;
-        document.getElementById(&#x22;nimInput&#x22;).value = &#x22;&#x22;;
-        document.getElementById(&#x22;namaInput&#x22;).value = &#x22;&#x22;;
-        document.getElementById(&#x22;prodiSelect&#x22;).selectedIndex = 0;
-        document.getElementById(&#x22;jenjangSelect&#x22;).selectedIndex = 0;
-        document.getElementById(&#x22;keteranganInput&#x22;).value = &#x22;&#x22;;
+      setTimeout(() => {
+        successMsg.style.display = "none";
+        document.getElementById("nimInput").value = "";
+        document.getElementById("namaInput").value = "";
+        document.getElementById("prodiSelect").selectedIndex = 0;
+        document.getElementById("jenjangSelect").selectedIndex = 0;
+        document.getElementById("keteranganInput").value = "";
       }, 4000);
     }
-  &#x3C;/script&#x3E;
-&#x3C;/body&#x3E;
-&#x3C;/html&#x3E;
+  </script>
+</body>
+</html>
