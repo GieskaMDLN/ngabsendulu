@@ -8,7 +8,8 @@
     body {
       font-family: 'Segoe UI', sans-serif;
       background: linear-gradient(to bottom right, #ffe4f2, #ffd9ec);
-      margin: 0; padding: 0;
+      margin: 0;
+      padding: 0;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -92,23 +93,24 @@
     <div class="form-group">
       <input type="text" id="nimInput" placeholder="Masukkan NIM kamu" />
       <input type="text" id="namaInput" placeholder="Masukkan Nama Lengkap" />
-      <select id="prodiSelect" >
+      <select id="prodiSelect">
         <option value="" disabled selected>Pilih Program Studi</option>
         <option value="Teknik Informatika">Teknik Informatika</option>
         <option value="Sistem Informasi">Sistem Informasi</option>
         <option value="Teknik Elektro">Teknik Elektro</option>
         <option value="Manajemen">Manajemen</option>
       </select>
-      <select id="jenjangSelect" >
+      <select id="jenjangSelect">
         <option value="" disabled selected>Pilih Jenjang Pendidikan</option>
         <option value="S1">S1</option>
         <option value="S2">S2</option>
         <option value="D3">S3</option>
+        <option value="S3">D3</option>
       </select>
       <textarea id="keteranganInput" placeholder="Keterangan (opsional)"></textarea>
     </div>
     <button onclick="submitAbsensi()">Kirim</button>
-    <div class="success-message" id="successMsg">absensi berhasil</div>
+    <div class="success-message" id="successMsg">Link Telegram telah dibuka. Silakan kirim pesannya di sana ya!</div>
   </div>
 
   <script>
@@ -120,30 +122,27 @@
       const keterangan = document.getElementById("keteranganInput").value.trim();
 
       if (!nim || !nama || !prodi || !jenjang) {
-        alert("Ehh kocak minimal isi semuanya lahhh");
+        alert("Ehh kocak, minimal isi semua kolom dulu yaa");
         return;
       }
 
-      let pesan = Permisi Bu Dosen Cynthia saya ${nama} dengan NIM ${nim}, dari Prodi ${prodi} Jenjang ${jenjang}, sudah melakukan absensi digital melalui website.;
-      if(keterangan){
-        pesan +=  Keterangan: ${keterangan};
+      let pesan = `Permisi Bu Dosen Cynthia, saya ${nama} dengan NIM ${nim}, dari Prodi ${prodi}, Jenjang ${jenjang}, sudah melakukan absensi digital melalui website.`;
+      if (keterangan) {
+        pesan += ` Keterangan: ${keterangan}`;
       }
 
       const encodedPesan = encodeURIComponent(pesan);
-      const telegramUrl = https://t.me/yCynthia48bot?text=${encodedPesan};
+      const telegramUrl = `https://t.me/yCynthia48bot?text=${encodedPesan}`;
       window.open(telegramUrl, "_blank");
 
       const successMsg = document.getElementById("successMsg");
       successMsg.style.display = "block";
 
-      setTimeout(() => {
-        successMsg.style.display = "none";
-        document.getElementById("nimInput").value = "";
-        document.getElementById("namaInput").value = "";
-        document.getElementById("prodiSelect").selectedIndex = 0;
-        document.getElementById("jenjangSelect").selectedIndex = 0;
-        document.getElementById("keteranganInput").value = "";
-      }, 4000);
+      document.getElementById("nimInput").value = "";
+      document.getElementById("namaInput").value = "";
+      document.getElementById("prodiSelect").selectedIndex = 0;
+      document.getElementById("jenjangSelect").selectedIndex = 0;
+      document.getElementById("keteranganInput").value = "";
     }
   </script>
 </body>
